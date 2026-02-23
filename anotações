@@ -1,0 +1,42 @@
+Dia 1    23/02/2026
+
+Mercado de trabalho ta hard.
+
+Se usar IA, Suas Bolas Explodem.
+
+oq é tecnico, hard(produzir)/soft(comunicar) skill
+
+  banco de dados: 
+
+-> arvores-b: para armazenamento de dados e acelerar consultas.
+-> Tabelas hash: para guardar pares do tipo chave-valor, oque é para indexação.
+-> Listas Encadeadas: para implementar listas e fila, para determinar a ordem de execução de transações.
+
+  Redes de computadores: 
+
+-> grafos: usados para representar os pontos de redes e as conexões entre eles, ajudando a determinar qual o melhor caminho para transporte de dados.
+
+Estrutura de dados é importante, evitar erros.
+
+      Ementa: ( Disciplina Ministrada Usando C ) 
+
+introdução a estrutura de dados -> funções e recursividade -> Estruturas, records -> Listas ( dificil )  -> Pilhas ( dificil )  -> Filas ( dificil )  -> Deques ( dificil )  -> Matrizes -> revisão -> Árvores
+
+Cosiderações:
+
+-> 2 estagios -> 5 pontos cada
+  I
+  L> AV1 ( 2,0 Lista Escrita em Papel / 3,0 Prova ) 
+  I
+  L> AV2 ( 5,0 Prova ) 
+
+Provas serão feitas no Papel, e Escrita! ( estilo Leo ) 
+I
+L> Provas são feitas fora do LAB
+
+Exercicios no BB
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
