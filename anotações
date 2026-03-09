@@ -37,6 +37,56 @@ L> Provas são feitas fora do LAB
 Exercicios no BB
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+09/03/2026
+
+Dados e linguagem de promoagração 
+
+Programas:
+L_> 
+
+Tipos de dados
+I
+L> Os tipos de dados definem os diferentes tipos de valores que podem ser armazenados e ,amopulados em um programa como numeros, strings, datas etc. ou seja, é o conjuto de regras para guardar os dados, e o conjunto de funções para usar esses dados que foram armazenaods.
+
+-> Exemplos de tipos de dados comuns incluem inteiros, numeros e de ponto flutuante, caracteres arrays, estruturas e ponteiros, dentre outros.
+
+-> Toda Lp apresentas tipos simples ( são os tipos primitivos e mais básicos, como ()
+
+-> As LP podem ser classificas de diferentes formas: 
+
+[ quanto á verificação de tipso de dados podendo ser 2 tipos ] 
+
+L_> quanto á verificação de tipo: 
+  L> Estaticamete tipada:
+      L> Os tipos dos dados são verificados em tempo de compilação e jamais mudam de tipo durannte a execução de software.
+
+*
+#include <stdio.h> // considere a linguagem C 
+
+int main() { 
+int numero; // declaração de variavel inteira
+printf("Atribua um valor inteiro>"); // mensagem pedindo 
+                                    // o valor
+numero = 'a'; // atribuição do valor para a variavel 
+// O que acontece ao tntar executar o código?
+// O compilador da mensagem da erro e não executa 
+*
+
+-> quanto a verificação de tipo
+   L> Dinamicamente Fipada 
+      L> os tipos dos dados são verificados em templo de execução, ou seja, as variáveis so terão seus tipo definidos quando o programa estiver sendo executado.
+          L> é possível digitar um tipo para a variável. e contribuir outra diferente durante a funcionamento do programa; ou declarar a variavel sem tipo, e associar um tipo so quando um valor for atribuido a ela durante a execção do programa
+*
+# considere um código em python
+# inicialmente, a variavel recebe um numero inteiro 
+variavel = 10 
+print(f"valor: {variavel}, tipo: (type{variavel})")
+#em seguida a mesma variavel recebe uma string 
+variavel = " ola mundo! "
+print(f"valor: {variavel}, tipo: (type{variavel})")
+#a saida será
+Valor: 10, tipo < class 'int'>
+
 
 
 
