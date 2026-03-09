@@ -86,7 +86,35 @@ variavel = " ola mundo! "
 print(f"valor: {variavel}, tipo: (type{variavel})")
 #a saida será
 Valor: 10, tipo < class 'int'>
+Valor: Olá, mundo!, tipo: <class 'var'> 
 
+-> quanto á forma de declaração dos tipos de dados: 
+    L> Tipagem Implicita 
+        L> é aquela em que o tipo de variável não precisa ser declarado no momento da criação da variável, são exemplos: python, javascript e swift;
+                                                                                                                                                L> ( mt caro )                           
+        L> Em geral, a linguagem dinamicamente lipada acrescentam esse tipo de declaração, por isso menos digitação;
+        L> A variável e declarada ja recebendo o valor que será atribuido a ela. ou a variavel é criada sem tipo e na execução, quando algum valor for atribuido a variavel, 
+então o seu tipo será definido de acorod ocom o valor recebido.
 
+exp: | a b | 
+       -> 123,45 <- 
+
+-> Tipagem explicita 
+      L> é aquele que o tipo da variavel precisa ser explicitamente declarada para que uma variavel seja criada e por isso exigem mais digitações, 
+
+-> quanto a conversão de tipos de dados, as linguagens podem ser:
+    L> francamente tipada: 
+        L> Na tipagem fraca, as conversões entre tipos de dados são realizadas automaticamente quando necessário:
+        L> As operações entre tipos incompativeis são permitidas e podem resultar em comportamento inesperado
+        L> Exemplos de linguagens com tipagem fraca inclue Javascro´t e php 
+    L> Fortemente tipadas
+        L> Na tipagem forte, as conversões entre tipos de dados não são realizados
+
+-> QUais caracteristias dos dados devo onsiderar ao escolher lingaugem de programação eu devo usar 
+    L> A escolha entre os diferentes tipos de tipagem pode afetar a legibilidade segurança e eficiência do código;
+    L> E importante considerar as necessidades e requisitos especificas de cada projeto ao escolher uma linguagem de programação;
+    L> Conhecer bem as linguagem de programação é fundamental para determinar qual a melhor linguagem a ser usada num certo projeto;
+
+    { Lmebrnando a linguagem C } 
 
 
