@@ -190,3 +190,36 @@ int main() {
 } 
 
 *
+
+Exercicio de Sala 01:
+
+  01) Crie uma Struct chamado " Retangulo " com os seguintes 
+membros: base ( número decimal); altura ( numero decimal), area ( numero decimal). 
+No main, declare uma váriavel do tipo struct Retangulo, atribua valores de exemplo para base e altura,
+Calcule a area do retângulo ( base * altura ) e armazene o resultado no membro area. Finalmente imprima
+os valores da base, altura e área;
+
+*
+#include <stdio.h> 
+  struct Retangulo { 
+
+  #include <stdio.h>
+  float base;
+  float altura;
+  float area; 
+};
+
+
+
+
+*
+  02) Defina uma Struct chamada Circulo com os seguintes membros: raio ( número decimal ); diametro ( numero decimal ) 
+e circuferencia ( número decimal ). No main, declare uma variável do tipo struct Circulo, e lea do Tclado um novo valor para raio. Calcule 
+o diâmetro (2* raio) e armazene-o em diametro. Ccalcule também a circuferencia ( 2 * PI * raio, considere PI ~= 3.14159) e aramzene o resultado
+em circuferencia,. imprima os valores do raio, diametroe circuferência;
+
+  03) 
+
+
+
+
