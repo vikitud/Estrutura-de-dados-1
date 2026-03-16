@@ -117,4 +117,11 @@ exp: | a b |
 
     { Lmebrnando a linguagem C } 
 
+Estrutura Heterogêneas de Dados ( Estrutura ) 
 
+-> Estrutura é uma coleção de variáveis referenciada por um nome 
+-> Estruturas são tipos de variáveis que agrupam dados geralmente desigual
+-> Os itens da estrutura são chamados membros ou campos
+-> Algumas linguagens de programação chamam as estrutura de registros
+-> Uma definição de estrutura forma um modelo que pode ser usado para criar variáveis do tipo aquelas estruturas
+-> geralmente todos os elementos de uma estrutura possuem alguma relação entre si
