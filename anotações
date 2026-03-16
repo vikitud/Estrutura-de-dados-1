@@ -172,7 +172,7 @@ Mostrnado o uso estrutura num progrmaa em C:
 #iclude <string.h>
 // Definição d estruct livro
 struct Livro { 
-  chartitulo[50];
+  char titulo[50];
   char autor[50];
   int anoPublicação;
 };
@@ -201,6 +201,8 @@ os valores da base, altura e área;
 
 *
 #include <stdio.h> 
+#include <stdlib.h> 
+// estrutura
   struct Retangulo { 
 
   #include <stdio.h>
@@ -208,17 +210,68 @@ os valores da base, altura e área;
   float altura;
   float area; 
 };
+//programa principal
+ int main() { 
+      //declaração
+     struct retangulo r;
+      //atribuição
+     r.base = 5;
+     r.altura = 10;
+      //cálculo
+     r.area = r.base*r.altura;
+      //impressão
 
+printf("O retangulo de base %.2f e", r.base);
+printf("
 
-
+  return 0;
+  
+}
 
 *
+
+
   02) Defina uma Struct chamada Circulo com os seguintes membros: raio ( número decimal ); diametro ( numero decimal ) 
 e circuferencia ( número decimal ). No main, declare uma variável do tipo struct Circulo, e lea do Tclado um novo valor para raio. Calcule 
-o diâmetro (2* raio) e armazene-o em diametro. Ccalcule também a circuferencia ( 2 * PI * raio, considere PI ~= 3.14159) e aramzene o resultado
+o diâmetro (2* raio) e armazene-o em diametro. Calcule também a circuferencia ( 2 * PI * raio, considere PI ~= 3.14159) e aramzene o resultado
 em circuferencia,. imprima os valores do raio, diametroe circuferência;
 
-  03) 
+*
+#include <stdio.h> 
+#include <stdlib.h>
+//estrutura
+  struct Circulo{ 
+float raio;
+float diametro;
+float circuferencia
+};
+//programa principal
+  int main() { 
+  //declarações
+  float pi = 3.141559
+  struct circulo c;
+  //leitura
+  printf("digite o raio: ");
+  scanf("%f",&c.raio);
+  //cálculos
+  c.diametro = c.raio*2;
+  c.circuferencia = 2 * pi * c.raio;
+  //impressão
+
+  printf("Raio: %.2f \n Diametro: %.2f",c.raio,c.diametro);
+  print("\n
+  return 0;
+}
+
+
+
+  03) Declare uma struct chamado "conta" com os seguitnes membros: saldoinicial ( numer decimal), 
+TaxaJurosmensal ( numero dcimal ), Representando a taxa em porcentagem ) e SaldoFinalAposUmMes U número decimal ).
+No main, crie uma variável do tipo struct Conta, e leia do teclado valores que saldoIniciale taxadejurosmensal. 
+Calcule o saldo final após um mês ( saldo inicial + ( saldo inicial * taxa de juros mensal / 100)) 
+e armazene o resultado em saldoFinalAposUmMes. imprime os valores de saldoInicial, taxadeJurosMensal 
+e saldoFinalAposUmMes;
+
 
 
 
