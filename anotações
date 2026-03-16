@@ -110,14 +110,14 @@ exp: | a b |
     L> Fortemente tipadas
         L> Na tipagem forte, as conversões entre tipos de dados não são realizados
 
--> QUais caracteristias dos dados devo onsiderar ao escolher lingaugem de programação eu devo usar 
+-> Quais caracteristias dos dados devo onsiderar ao escolher lingaugem de programação eu devo usar 
     L> A escolha entre os diferentes tipos de tipagem pode afetar a legibilidade segurança e eficiência do código;
     L> E importante considerar as necessidades e requisitos especificas de cada projeto ao escolher uma linguagem de programação;
     L> Conhecer bem as linguagem de programação é fundamental para determinar qual a melhor linguagem a ser usada num certo projeto;
 
     { Lmebrnando a linguagem C } 
 
-Estrutura Heterogêneas de Dados ( Estrutura ) 
+                          Estrutura Heterogêneas de Dados ( Estrutura ) 
 
 -> Estrutura é uma coleção de variáveis referenciada por um nome 
 -> Estruturas são tipos de variáveis que agrupam dados geralmente desigual
@@ -125,3 +125,68 @@ Estrutura Heterogêneas de Dados ( Estrutura )
 -> Algumas linguagens de programação chamam as estrutura de registros
 -> Uma definição de estrutura forma um modelo que pode ser usado para criar variáveis do tipo aquelas estruturas
 -> geralmente todos os elementos de uma estrutura possuem alguma relação entre si
+
+  [ Estrutura - Exemplo ] 
+-> Um exemplo de estrutura seria um registro contendo os dados dos funcionários;
+  L> um funcionário é descrito por muitos atributos ( como nome, idade, rua em que mora e talz ) 
+-> a palavra chave struct informa ao compilador que um modelo de estrutura esta definido
+-> sintaxe
+  L>struct nome_da_struc { 
+  -> tipo1 atributo1;
+  -> tipo2 atributo2;
+  ...
+} 
+
+-> ADefinição de uma estrutura não cria nenhuma variável;
+
+-> Uma estrutura pode ser visto com um agrupamento de dados 
+-> considere o cadastro do funcionário de nome jose, com 30 anos de idade, que mora na rua sla, n'15
+    L>Todas essas informações são da mesma pessoa, logo é possível agrupá-las;
+
+-> Qual a motivação para utilização de Estruturas?
+-> manipulação facilitado de dados compostos ou estruturados;
+    L> Nem tudo que existe no mundo consegue ser representado por...
+
+-> para criar variáveis a partir de uma estrutura declarada é preciso seguir a sntaxe:
+
+-> para acessar os elementos de uma variável que foi criada a partir de uma struct, usa-se o nome da variável seguido de ponto (.) e seguido do nome do membro que deseja acessar;
+*
+
+struct ponto /"declara ponto do tipo struct"/
+{ float x;
+  float y;
+};
+...
+struct ponto p; /"declara p como variável do tipo struct ponto "/
+...
+p.x = 10.0;
+p.y = 5.0;
+
+*
+
+Mostrnado o uso estrutura num progrmaa em C:
+
+*
+
+#include <stdio.h>
+#iclude <string.h>
+// Definição d estruct livro
+struct Livro { 
+  chartitulo[50];
+  char autor[50];
+  int anoPublicação;
+};
+int main() { 
+  // Declaração de uma variável do tipo struct livro
+  struct Livro meuLivro
+
+  // Impressão dos dados do livro
+  printf("Informações do Livro:\n");
+  printf("Título:%s\n", meuLivro.titulo);
+  printf("Autor: %s\n", meuLivro.autor);
+  printf("Ano de publicação: %d\n", meuLivro.ano.Publicacao);
+
+  Return 0;
+} 
+
+  
