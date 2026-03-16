@@ -273,6 +273,121 @@ e armazene o resultado em saldoFinalAposUmMes. imprime os valores de saldoInicia
 e saldoFinalAposUmMes;
 
 
+            Typedef e Estruturas
 
+-> considere o seguinte trecho do código: 
+* 
+struct Pessoa { 
+...
 
+*
 
+A sintaxe geral para usar o typedef com struct é o seguinte; 
+  -> typedef struct [nome_da+struct] { 
+  -> // membros da estrutura
+  -> } [novo_nome_do_tipo];
+-> aplicando isso á struct pessoa criada anteriormente.
+
+Também é possível criar a estrutura e posteriormente usar o typedef
+
+*
+
+main () { 
+  struct Aluno{ 
+    int...
+
+*
+
+Estruturas sem Etiqueta
+
+-> ainda é possível criar uma estrutura sem declarar um nome para ela;
+-> nestas situações, é preciso criar imediatamente todas sa variáveis que terão o tipo da estrutura sendo feita, 
+logo ao final da decaraçãoda estrutura.
+-> O typedef ainda pode ajudar a criar uma estrutura sem etiqueta, mas dando um apelido,
+possíbilitando que novas variaveis semaj criadas posteriormente.
+-> essse recurso so pode ser usado quando...
+
+Estrutura sem Etiqueta
+
+-> os valores dos campos precisam ser passados na mesma ordem da declaração dos campos
+-> apesar da forma ideia de se manipular os campos de uma esturura seja atravez do uso do ponto (.),
+ainda é possível declarar uma váriavel, de struct passando seus vaores como se fosse um array;
+-> ainda é possível também atribuir uma váriavel a outra com "=";
+
+*
+#include<stdio.h>
+
+typedef struct { 
+  char nome[30]
+  int qtd;
+} item;
+
+int main(){
+    item i1 = {"item a", 10};
+    item...
+
+*
+
+Composição de estruturas ( estruturas Aninhadas )
+
+-> estruturas podem ter comapos que são variaveis do tipo de outras estruturas criadas anteriormente.
+-> mesmo com essa arquitetura, ainda é possível criar variáveis e passar valores para elas como se fosse dados de um array ( arranjo ) 
+-> e para acessar os caompos da variavel dentro da outra variavel vai ser necessário usar o ponto (.)  duas vezes;
+
+*
+typedef struct
+{
+  int dia;
+  char mes[10];
+  int ano;
+...
+
+*
+
+-> Estrutura podem sr passadas para funcções da mesma forma que variaveis 
+-> O nome de uma estrutura não é um endereço, portanto ela pode ser passada por um valor ( oque vai é uma copia );
+    L> A função acessa a copia da estrutura na pilha 
+...
+
+Exemplo
+
+*
+typedef struct ponto{
+  char letras;
+  float x;
+  float y;
+}ponto; 
+
+void imprime(ponto); 
+ponto captura();
+
+main(){
+  ponto p; 
+  p = captura();
+  imprime(p);
+  getchar();
+}
+void imprime(ponto p){ 
+ printf("o ponto fornecido foi: %.2f, %.2f)\n", p.x, p.y);
+}
+ponto captura(){
+  ponto b;
+  printf(" Digite as coodernadas do ponto(x,y): ");
+  scanf("%f,%f", &b.x
+...
+*
+
+-> também é possível que uma estrutura seja o tipo de retorno de uma função em C;
+-> criando a estrutura Venda: 
+*
+typedef struct Venda{
+    int pecas;
+    float preco;
+  }venda;
+*
+-> é posspivel criar uma funcção eque retorne venda: 
+*
+Venda TotalVendas ( 
+
+..
+*
