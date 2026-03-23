@@ -542,4 +542,50 @@ abs( );  [  ]
   -> maiores vatagens do uso de funções:
     -> facilita a verificação de erros;
     -> permite testar modulos individualmente;
-    
+    -> desenvolvimento independente dos modulos;
+    -> permite reutilização de codigo;
+  -> as funções são chamadas, ativadas ou invocadas por uma chamada de função;
+  -> a chamada de função mencionada ...
+
+Estrutura de uma função: 
+  tipo_retornado nome_da_função ( lista de parametros...)
+{ 
+  corpo da função
+}
+-> em que: 
+    -> tpo_retornado: especifica o tipo de valor que o comando return da função devolve
+...
+
+-> é possível declarar apenas a assinatura da função antes do programa principal e fazer a implementação dela depois do fim do prodgrama pricnipal 
+
+  -> a parte que tem apenas a assinatura da funcção é chamada de prototipo 
+
+*
+// 1. declaração do prototipo da função
+// indica a compilador a existencia da função, seu nome 
+// tipo de retorno e tipos de paramentros 
+int somar ( int a, int b); //prototipo
+
+//2 . programa principal ( função main ) 
+
+int main() { 
+  int num1 = 10;
+ int num2 = 5;
+  int resultado;
+
+// chamada da função 'somar'. o compilador ja sabe sobre elas 
+// graças ao prototipo declarado anteiormente.
+
+  resultado = somar ( num1, num2); //chamada
+
+  printf("a soma de %d e %d é: $d\n", num1, num2, resultado);
+  return 0;
+}
+
+// 3. implementação da função ( depois da main ) 
+// aqui esta o codigo eal que a função executa.
+
+int somar( int a,int b) { 
+  int soma = a + b ;
+  return soma; // retorno 
+} 
