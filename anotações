@@ -403,3 +403,35 @@ Comosição de Estruturas ( estruturas aninhadas )
 *...*
 
 -> Estruturas podem ser passadas para funções da mesma forma que variáveis simples 
+-> o nome de uma estrutura não é endereço, portanto ela pode ser psassada por valor ( oq vai é uma copia ) 
+  -> A função acessa a copia da estrutura na pilha
+
+-> prototipo das funções 
+-> variavel estrutura sendo passado por paramentro 
+-> criação das funções 
+
+*
+typedef struct ponto[
+  char letra;
+  float x;
+  float y;
+}pronto
+
+void imprime(ponto);
+ponto captura();
+
+main(){
+  ponto p;
+  p = captura();
+  imprime(p) 
+  getchar();
+}
+void imprime(ponto p){
+  printf("o ponto fornecido foi: (%.2f, %.2f)\n", p.x, p.y);
+} 
+ponto captur(){
+  ponto b;
+  printf("digite as coordenadas do ponto (x,y): ");
+  scanf('%f,%", &b.x, 8b.y);
+  return b;
+} 
