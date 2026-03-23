@@ -713,15 +713,17 @@ exp:.
 Considere a mesma função e o mesmo programa principla de antes 
 
 *
+//passagem de parametro
+// declaração da função incremento_e_soma
 int incrementa_e_soma(int a, int b){ 
   int soma;
 int soma;
-  a = a + 1; 
-  b = b + 1;
-  soma = a + b;
-  return soma;
+  a = a + 1; //valor de a foi alterado
+  b = b + 1; // valor de b foi alterado 
+  soma = a + b; //soma dos valores alterados
+  return soma; //retorno 
 }
-
+/programa principal
 int main (){ 
   int num1 = 10;  
   int num2 = 20;
@@ -743,3 +745,4 @@ int main (){
   valor de num2: 21
   valor de total: 32
 -> isso acontece porque as alterações feitas dentro da função seriam realizada diretamente na posição de memoria de num1 e num2 
+
