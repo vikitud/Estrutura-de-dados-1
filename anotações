@@ -618,3 +618,38 @@ return 0;
 
 *
 
+Escopo de uma função
+
+-> oq é um escolo (é um limite da função ) 
+
+-> em C, cada função é um bloco unico e autonomo de codigo 
+-. um codigo de uma funçã oe privativo aquela função nao pode sera cessada por ennum comando da função
+   -> exeto por meio de uma chamad ofunção
+-> variaveis definidas intermanente a uma função chamdas " locais " ( existe quando ocorre a entrada na função e a desruida ao sair) 
+...
+
+-> cada função deve ser limitar a realizar uma tarefa simples e bem definida;
+-> o  nome da função deve expressar efetivamente auqela tarefa que ela foi destinada a realizar;
+    -> issp facilita a abstração e favorece a capacidade de reutilização de codigo
+-> usar uma função da bibliotecla padrao c torca nes programas mais portaveis 
+...
+
+-> erros comuns
+  -> esquescer de retornar um valode uma função que deveria retornar lalgo pode levara erros inesperados de compliação e excução
+  -> retornar um valor de uma função com um tipo diferente daqueeleque foi decladaado
+  -> declarar parametros da função do mesmo tipo como float x,y em vez de float x, float y;
+    -> a declaração de parametros float x,y tornaria na realidade y um parametro 
+...
+
+*
+
+ex:.
+
+  int soma( int a, int b){ 
+  int a; 
+  int b;
+  int c;
+  int d;
+
+*
+
