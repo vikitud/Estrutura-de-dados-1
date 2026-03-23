@@ -653,3 +653,41 @@ ex:.
 
 *
 
+
+Tipos de Passagens de Paramentros 
+
+  -> quando uma função e chamada muitas vezes é preciso fornecer a ela alguns dados para que ela possa realizar sua tarefa 
+    -> esses dados são conhecidos por parametros ou arugmentos da função
+  -> a forma como esses dados são passados para a afybção é crucial, e pode ter um impacti significado na ação.
+
+Passagem por valor ( Call By Value ) 
+  -> imagine que você pegou uma ficha de cadastro em branco online de um curso, fez uma impressão  dessa ficha e entregu taç cpóa ára i, a,ogp 
+      -> as alterações que seu amigo fizer na ficha dlee não vao influenciar nos valores que eustão na sua ficha de inscrição online 
+  -> a passagem de valor...
+
+exp:.
+Considere a função de um programa principlal mostrado ao lado
+
+//passagem de parametro 
+// declaração da função incrementa_e_soma
+int incrementa_e_soma(int a, int b) { 
+  int soma;
+  a = a + 1; 
+  b = b + 1;
+  soma = a + b;
+  return soma;
+} 
+
+int main(){
+  int num1 = 10;
+  int num2 = 20;
+  int total;
+
+total = incrementa_e_soma(num1,num2);
+
+printf("valor de num1: %d\n");
+printf("valor de num2: %d\n");
+printf("valor de total: %d\n");
+system ("pause");
+return 0; 
+} 
