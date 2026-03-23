@@ -589,3 +589,32 @@ int somar( int a,int b) {
   int soma = a + b ;
   return soma; // retorno 
 } 
+
+*
+
+exp:.
+
+include <stdio.h> 
+  int soma (int a, int b){ 
+  return a+b;
+} 
+int dub(int a, int b ){ 
+  return a-b;
+} 
+minhafuncao.h
+
+exp2:. 
+
+#include <stdio.h> 
+#include <minhafuncao.h> 
+
+int main (){
+  int c,d,e;
+ c= 10 
+d = 20
+e = soma (c,d);
+return 0;
+} 
+
+*
+
