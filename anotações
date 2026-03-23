@@ -734,3 +734,12 @@ int main (){
   printf("valor de total: %d\n");
   return 0;
 } 
+
+*
+
+-> dessa vez, a passagem de paramentros feita por refenreica 
+-> Os valores que seira obtida s na saida do programa seriam: 
+  valor de num1: 11
+  valor de num2: 21
+  valor de total: 32
+-> isso acontece porque as alterações feitas dentro da função seriam realizada diretamente na posição de memoria de num1 e num2 
