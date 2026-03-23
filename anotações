@@ -746,3 +746,27 @@ int main (){
   valor de total: 32
 -> isso acontece porque as alterações feitas dentro da função seriam realizada diretamente na posição de memoria de num1 e num2 
 
+int função ( exemplo ); { 
+...
+return 0;
+} 
+
+*
+
+Passagem por resultado (Call Of Result ) 
+-> desta vez, você esta com a ficha mas fez uma copia dela e entregou para o seu amigo, sua ficha estava preenchida com seus dados originais mas na hora de entregar voce pegou todos os dados da ficha do seu amgio e escreveu na sua ficha também
+
+Exp:.
+-> considere a mesma função e o mesmo programa pricnipal
+
+*
+
+int incrementa_e_soma ( int a, int b ) { 
+  int soma; 
+  a = b + 1;
+  b = b + 1;
+  soma = a + b;
+  return soma; 
+}
+
+int main (){
