@@ -435,3 +435,111 @@ ponto captur(){
   scanf('%f,%", &b.x, 8b.y);
   return b;
 } 
+
+-> também é possível que uma estrutura seja o tipo de rentorno de uma unfção..
+
+-> é possível cirar vetore e matrizes de estruturas, como se faz em qualquer outro tipo basico de linguagem C
+-> considere a estrutura aluno a seguir e o código ao lado 
+*
+typedef struct { 
+  char nome[100];
+  int matricula;
+  char endereçõ[100];
+}aluno;
+*
+
+*
+int main () { 
+  //declaração do vetor de alunos 
+  Alunos A[10];
+  //loop para ler os dados de cada aluno
+printf9("Digite os dados dos 10 alunos:\n");
+for (int i = 0; i < 10; i++) { 
+  printf("\n--- Aluno %d ---\n", 1 + 1);
+  printf("nome: ");
+  fgets(A[i],nome,sizeof(A[i],nome0, stdin);
+  //remover a quebra de linha (linha lida pelo fgets )
+  A[1], nome[strcspn(A[i]. nome,"\n)] = 0;
+
+  printf("matricula: ");
+  scanf("%d", &A[i].matricula);
+// limpar o buffer do teclado para a proxima leitura de string
+while ( getchar() != '\n');
+
+  printf(endereco, sizeof...
+
+-> observe que o ngc anterior, a declaarção do vetor foi feita da mesma forma uqe se foi declarada os vetores de tipos basico 
+  -> Aluno A[10]
+-> para acessar um campo de um alino...
+
+Exercicio 2: 
+
+1) crie uma estrutura chamada Ponto que armazene as coodernadasinteiras x e y de um ponto no plano cartesiano, 
+Em seguida, declare duas variaveis do tipo ponto, 
+leia valores do teclado e atribua a seus campos e calcule a distancia de manhattan entre esses dois pontos. 
+A distância de manhattan entre dois pontos (1x,y1)  e (2x, 2y) é dada por: |x1-x2| + | y1-y2 |. 
+imprima os valores dos pontos a distância calculada
+
+*
+include <stdio.h>
+  typedef struct Ponto{ 
+    float x;
+    float y;
+}p;
+int main(){
+  p ponto1;
+  p ponto2;
+
+  printf("coordenadas ponto 1");
+  scanf("%f, %f" &ponto1.x, ponto2.y);
+  printf("coordenadas ponto 2");
+  scanf("%f, %f" &ponto1.x, ponto2.y);
+
+  return 0;
+} 
+
+2) Define uma estrutura chamada livro que contenha as seguintes campo:
+  -> titulo ( uma cadeia de caacteres com tamanho máxi de 50);
+  -> autor ( outra cadeia de caracteres com tamanho máximo de 50);
+  -> ano_publicacao
+  -> utilize typedef para criar um " alias " TipoLivro para esa estrutura. Declare e leia tres variáveis do livro com informações de livros diferentes. em seguida imprima os valores detalhada  livro (titulo, autor e ano de publicaç~çao) 
+
+*
+include <stdio.h> 
+  typedef struct Livro{
+    char titulo[50];
+    char autor[50];
+    int  ano[50];
+}l;
+
+*
+
+
+Função
+
+  -> função é uma unidade de codigo e programação autonoma desenhada para cumprir tarefas particular;
+  -> Funções divide as grandes tarefas de computação em tarefas menores;
+    -> a melhor maneira de escrever programas grandes é construilo a partir de pequenas partes ( ou modulos ) 
+exp:.
+
+abs( );  [  ]
+         [  ]
+         [  ]
+
+    -> dividir para conquistar ou dividir e conquistar " ( divisão e conquista );
+  -> modulariza~ção do código;
+    -> muito comum em linguagens estruturadas  ( imperativas);
+  permitem que pessoas trabalhem sobre oq as outras ja fizeram, reaproveitando usando função.
+
+-> programaas em C geralmente compos de várias pequenas funções 
+  -> em vez de oucas funções de maior tamanho ( clena code )   
+  -> A filosofia do "clean code" diz que uma funçãodeve ser sempre muito pequena, ocupando no maximo 1 tela de tamanho;
+  -> robert C. Martin, autor do livro "Clean Code: a handbook of agile software craftsmaships", 
+     fala que uma função não deveria chegar nem a 20 linhas ( promovendo facilidade de compreensão, 
+     foco e responsabilidade unica, facilidade ao testar ) 
+  -. caso não caiba todo o codigo dentro em uma função, deve-se dividila em funções menores que serão chamadas dentro da função original;
+
+  -> maiores vatagens do uso de funções:
+    -> facilita a verificação de erros;
+    -> permite testar modulos individualmente;
+    
