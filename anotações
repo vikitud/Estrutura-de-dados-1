@@ -691,3 +691,46 @@ printf("valor de total: %d\n");
 system ("pause");
 return 0; 
 } 
+
+*
+
+
+exp:.
+
+1234 int num1 10
+4567 int A 11
+
+
+-> incrementa_e_soma recebe dois valores e recebe ambos são modificados dentro do codigo da função 
+-> considerando que a passagem...
+
+Passagem por Referencia ( Call By Reference ) 
+
+-> imagine agora que em vez de imprimir a ficha de inscrição, voce passou apra seu amgio o endereço online de onde esta a sua ficha de inscrição
+-> a passagem por referencia usa exatamente essa mesma logica
+
+exp:.
+Considere a mesma função e o mesmo programa principla de antes 
+
+*
+int incrementa_e_soma(int a, int b){ 
+  int soma;
+int soma;
+  a = a + 1; 
+  b = b + 1;
+  soma = a + b;
+  return soma;
+}
+
+int main (){ 
+  int num1 = 10;  
+  int num2 = 20;
+  int total;
+
+  total = increementa_e_soma(num1, num2);
+
+  printf("valor de num1: %d\n");
+  printf("valor de num2: %d\n");
+  printf("valor de total: %d\n");
+  return 0;
+} 
