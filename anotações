@@ -391,3 +391,15 @@ Venda TotalVendas (
 
 ..
 *
+
+
+23/03/2026
+
+Comosição de Estruturas ( estruturas aninhadas ) 
+
+-> estruturas podem ter componentes que são variáveis do tipo de outras estruturas criadas anteriormente
+-> mesmo com essa arquitetura,ainda é possível cirar variaveis e passar valores para elas coko se fosse dados de um array
+-> e para acessar os campos da variavel dentro da outra variavel, vai ser mais...
+*...*
+
+-> Estruturas podem ser passadas para funções da mesma forma que variáveis simples 
