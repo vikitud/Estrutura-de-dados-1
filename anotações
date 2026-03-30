@@ -770,3 +770,184 @@ int incrementa_e_soma ( int a, int b ) {
 }
 
 int main (){
+
+*
+
+30/03/2026
+
+Recursividade
+
+-> uma função recursiva é uma função que chama ela msma, ou diretamente ou indiretamente por meio de outra função.
+-> a recursão requer certo nivel de abstração.
+-> quando uma função recursivsa é chamada para resolver um problema, na verdade é como se s ela soubesse resoler apenas os casos mais simples do problema, ou os chamados casos basicos ( ou condições de parada ) 
+-> para solucionar partes, depende de umas ações ai...
+
+  -> para o perfeito funcionamento da recursividade, o comando return é usado em conjunto com a nova chamada funçao.
+  -> cada vez que é chamada novamente, um novo espaço de memoria é alocado para a nova chamada, e o espaço de memoria usado para o chaad anterior fica salvo...
+
+  exp:.
+        -> imagine a função smt(int var) que recebe um valor e realiza a soma de todos os algarismo entre 0 e aquele recebido
+        -> smt(0) = 0->0
+        -> smt(1)-> 1 + 0 -> 1
+        -> smt(2) -> 2 + 1 + 0 -> 3
+        -> smt(3)   -> 3 + 2 + 1 + 0 -> 6
+        -> achar um padrão 
+    -> o resultado do somatorio atual é sempre  valor do parametro da função atual somado ao esutado da função smt() do parametro atual abstraído de 1;
+    -> Usando essa estrategia, tem se...
+
+  -> O codigo para implementar essa função seria:
+*
+int smt(int var){
+  if(var ==0)
+    return 0;
+else
+    return var + smt(var-1);
+} 
+*
+  -> observe que o unico valor realmente conhecido é o somatorio de zero...
+
+-> dentro do pc ( considere que smt() foi chamado com valor 5. o computador começa a reservar memoriapara fazer a execução
+
+          Criação da pilha de recursão
+          <-
+(6) | smt(0) | var=0 | result = 0
+(5) | smt(1) | var=1 | result = 1 + smt(1-1) 
+(4) | smt(2) | var=2 | result = 2 + smt(2-1) 
+(3) | smt(3) | var=3 | result = 3 + smt(3-1) 
+(2) | smt(4) | var=4 | result = 4 + smt(4-1) 
+(1) | smt(5) | var=5 | result = 3 + smt(5-1)
+
+Removeu o topo da pilha
+
+(7) | smt(1) | var=1 | result = 1 + 0 = 1
+    | smt(2) | var=2 | result = 2 + smt(2-1)
+    | smt(3) | var=3 | result = 3 + smt(3-1)
+    | smt(4) | var=4 | result = 4 + smt(4-1)
+    | smt(5) | var=5 | result = 5 + smt(5-1)
+
+Removeu o topo da pilha    (8)
+
+    | smt(2) | var=2 | result = 2 + 1 = 3
+    | smt(3) | var=3 | result = 3 + smt(3-1)
+    | smt(4) | var=4 | result = 4 + smt(4-1)
+    | smt(5) | var=5 | result = 5 + smt(5-1)
+                  I
+                  V
+
+    | smt(3) | var=3 | result = 3 + 3 = 6
+    | smt(4) | var=4 | result = 4 + smt(4-1)
+    | smt(5) | var=5 | result = 5 + smt(5-1)
+                  I
+                  V
+    | smt(4) | var=4 | result = 4 + 6 = 10
+    | smt(5) | var=5 | result = 5 + smt(5-1)
+                  I
+                  V
+    | smt(5) | var=5 | result = 5 + 10 = 15
+
+
+  -> toda função que usa recursividade, também cria uma pilha de chamada na memoria ( pilh )
+
+  -> Ja que é possível resolver um problema tanto com recusividade quanto com iterativo ( laços ), quando usar uma ou outra?
+    -> evite usar recursividade em que o desenpenho é fundamental
+      -> as chamadas recursivas são um pouco mais demoradas e consomem memoria adicional 
+
+  -> tanto interação quanto recursão se baseiam em uma estrutura de controle: a interação usa uma estrutura de repetição, a recursão uma estrutura de seleção;
+  -> tanto a iteração quanto a recursão envolvem repetição repetição ( uma direta e a outra com funções)
+  -> ambas envovem testes de encerramento ( condição de parada ) 
+  -> A iteração e a recursão podem ocorrer idefinidamente. cuidado, a iteração infinita ocorre quando a condição do loop uncase torna falsa. A recursão infinita ocorre quandonão há convergenciapara o caso basico
+      L-> recursividade infinita pode ser reportda pesquisando no overflow...
+
+  Exp:. 
+      -> crie a função que calcula o fatorial de um numero ecebido por parametro
+
+  *
+#include <stdio.h> 
+
+  // função recursiva para caulcular o fatoria lde um numero 
+  long fatorial_recursivo(long n ){ 
+// caso base: fatorial de 0 é 1
+  if (n == 0){
+    return 1;
+  } else if (n < 0 ) { 
+    // fatorial não esta definido para numeros negativos 
+  printf("Erro: fatorial  não esta definida para numeros negativos.\n");
+  return -1; // returna -1 pra indicar um erro
+  } else {
+    //numero recursivo: n! = n * (n-1)!
+    return  n * fatorial_recursivo(n-1);
+  }
+}
+
+int main(){
+    int numero;
+    printf("digite um numero:");
+    scanf("%d",&numero);
+    printf("%ld", fatorial_recursivo(numero));
+    
+    return 0;
+}
+
+  *
+
+-> calcular o n-ésimo termo de uma série de fibonacci;
+-> a serie de fibonacci começa com 0, seguido de 1, e na sequencia, o próximo termo é obtida pela soma dos dois termos anteriores, assim: 
+
+-> espiral de fibonacci:
+    L> é uma curva continua, mas que não pode ser representada por uma unica equação matematica
+// Função para calcular o n-ésimo termo da série de fibonacci ( recursiva):
+
+*
+
+long fib_recursivo(int n) { 
+  if(n <= 1){
+    return n;
+} else { 
+  return fib_recursivo(n-1) + fib_recursivo(n-2);
+ }
+}
+
+*
+
+Exp:.
+
+1) crie uma função recursiva que mostra todos os valores pares entre um numero que foi fornecido por parametro e zero (0). 
+este numero fornecido nunca pode ser negativo;
+
+*
+#include <stdio.h> 
+void
+  par( int a ) { 
+  if ( a < 0 ){ 
+    printf("erro");
+  return;
+  }
+  else if (a == 0) { 
+    printf("0");
+    return;
+}
+else if (a%2 == 0){
+    printf("%d",a);
+  return par ( "%d", a ) 
+  return par ( a-1) 
+}
+
+
+    
+*
+
+2) crie a função recursiva em C que recebe um numero e testa se ele é multiplo de 5, se não for, a função acaba, mas se for multiplo de 5, 
+então ela mostra todos os multiplos de 5, começando do numero até 0. depois de confirmar que o numero é multiplo de 5,
+a função so deve fazer chamadas recursivas que acessem diretamente outros valores que são multiplos.
+
+*
+#include <stdio.h> 
+
+*
+3) Escreva uma função recursiva chamada SomaDigitos que recebe um numero inteiro positivo com parametro e retorna a soma de seus digitos;
+  -> exemplo, ao receber583, deve fazer 5 + 8 + 3 = 16;
+
+*
+#include <stdio.h> 
+
+*
