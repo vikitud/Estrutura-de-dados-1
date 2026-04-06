@@ -951,3 +951,61 @@ a função so deve fazer chamadas recursivas que acessem diretamente outros valo
 #include <stdio.h> 
 
 *
+
+
+
+
+
+06/04/2026
+
+Revisão
+
+(introdução, Estruturas heterogeneas, funções e recursividade) 
+
+1) Defina
+
+  1- Dado;  ( fato bruto, qualquer contexto envolvendo ele ) 
+  2- informação; ( momento que bota dado, vira info ) 
+  3- Conhecimento; ( Conjunto de informações processadas )
+  4- Integliencia 
+  5-  Estrutura homogenea;   ( nunca estrutura basica, por se baserar com coisa que existe, exemplo: um vetor [ quando so tem numero inteiro
+  6 - Estrutura heterogenea   ( )
+
+2) Crie a estrutura Data ( dia, mês e ano, cada um deles sendo um inteiro). Crie a estrutura Endereco ( Rua, Bairro, Numero 
+
+
+3) Mostre a diferença entre cada um dos conceitos a seguir, e mostre exemplos de linguagens que seguem cada uma das classificações 
+
+a. Linguagem Esteticamente tipada e dinamica tipada; ( são variaveis em tempo de compilação [ determinando o tipo de variavel ] / ( tipo de variavel decoberto em execução )
+b. Linguagem fortemente tipada tipada e fracamente tipada;   ( ( vc precis afzr explicictamente que quer muda [ vc tem que da comando mudar ] / ( vc n da comando mas auto faz, tipo tu bota numeoro como string, ele sabe que tu é burro e corrigi )
+c. Linguagem implicita e linguagem explicita;
+
+4) explique oq são passagem de parametro (que é Função) por valor, por referencia e por resultado. Crie uma função e um programa principal para ajudar na sua eplicação; ( manda uma copia da variavel n mee na copia original, e quando sai manda a copia ) /e por referencia (  uma copia do endereço da memoria ) / e por prototipo ( so com cabeçalho tem referencia ) 
+
+5) Crie a estrutura Carro, com chassi ( inteiro ), cor, modelo, fabricante e ano de fabricação. 
+depois escreva duas funções para ler um carro e para imprimir os dados de um carro. Essas funções devem ter porttipos.
+Por fim, crie um programa que le 3 carros ( num array ) e imprime os =3 a tela ( chamando as funções criadas );
+
+6) Usando recursividade, crie a função que recebe um numero inteiro e retorna a soma de todos os multiplos de 3 presentes entre 0 e o numero lido;
+
+7) Usando recursividade, Crie a função que calcula o fatorial de um numero,mas apenas valores pares existentes entre o numero e zero;
+
+
+Código revisão
+
+* 
+int fuc(int a, int b){
+  a = a+10;
+  b = b+10;
+  return a+b;
+}
+
+int main(){
+  int x = 10;
+  int y = 20;
+  int z;
+  printf("x: %d, y:%d, z: %d n\", x, y, z);
+  z=func(x,y);
+  printf("x: %d, y:%d, z: %d n\", x, y, z);
+  return 0;
+}
