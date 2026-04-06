@@ -1005,10 +1005,22 @@ int main(){
   int x = 100;
   int y = 200;
   int z;
-  printf("x: %d, y:%d, n\", x, y, z);
+  printf("x: %d, y:%d, n\", x, y);
   z=func(x,y);
-  printf("x: %d, y:%d, n\", x, y, z);
+  printf("x: %d, y:%d, z:%d n\", x, y, z);
   return 0;
 }
 
 *
+
+
+                                            valor                            Resultado
+X:100, y:200                                1A2B X int 100                   1AB2 x int 110
+X:100, y:200, z:320                         3C4D Y int 200                   3C4D y int 210
+x:100, y:200                                5EF6 Z int 320                   5E6F z int 320
+x:110, y:210, z: 320                        111A a int 110                   111A a int 110
+x:100, y:200                                222B b int 210                   222B b int 210
+x:110, y:210, z= 320                        Referencia
+                                            1A2B x int 110 a 
+                                            3C4D y int 210 b
+                                            5EF6 z int 320 
