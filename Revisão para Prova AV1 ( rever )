@@ -1,0 +1,226 @@
+🧠 🧸 1. IDENTIFICADORES (nomes das coisas)
+
+👉 É só o nome que você dá pras coisas
+
+🏠 Vida real:
+seu nome = João
+nome do cachorro = Rex
+💻 No código:
+int idade;
+String nome;
+🚨 REGRAS IMPORTANTES (cai MUITO)
+
+✔ Pode começar com:
+
+letra → nome
+_ → _idade
+
+❌ NÃO pode:
+
+1nome ❌
+🤯 Pegadinha
+
+👉 Java diferencia maiúsculo e minúsculo
+
+nome
+Nome
+NOME
+
+👉 Tudo diferente!
+
+🧱 2. CLASSE E OBJETO (O MAIS IMPORTANTE DA PROVA)
+🍰 Classe = molde
+
+👉 Tipo forma de bolo
+
+class Pessoa {
+    String nome;
+}
+
+👉 Isso NÃO é uma pessoa ainda!
+
+🍪 Objeto = bolo pronto
+Pessoa p1 = new Pessoa();
+
+👉 Agora EXISTE uma pessoa
+
+🧠 Tradução burra:
+classe = ideia
+objeto = coisa real
+🏷️ 3. ATRIBUTOS (características)
+
+👉 São as infos do objeto
+
+class Produto {
+    String nome;
+    double preco;
+}
+
+👉 nome e preco = atributos
+
+🔧 4. MÉTODO (ação)
+
+👉 É o que o objeto FAZ
+
+void falar() {
+    System.out.println("Oi");
+}
+
+👉 Tipo:
+
+pessoa fala
+carro anda
+🏗️ 5. CONSTRUTOR (CAI MUITO)
+
+👉 É o que cria o objeto já preenchido
+
+public Produto(String nome) {
+    this.nome = nome;
+}
+🤯 THIS (PEGADINHA CLÁSSICA)
+this.nome = nome;
+
+👉 Tradução:
+
+esquerda → coisa do objeto
+direita → o que veio
+
+👉 “o nome do objeto recebe o nome que veio”
+
+🔁 6. SOBRECARGA (professor AMA)
+
+👉 Mesmo nome, jeitos diferentes
+
+Produto(String nome)
+Produto(String nome, double preco)
+
+👉 Tipo pedir:
+
+café
+café com leite
+🔢 7. TIPOS DE DADOS
+
+👉 Tipo da variável
+
+int → número inteiro (10)
+double → número com vírgula
+String → texto
+boolean → true/false
+➕ 8. OPERADORES (contas)
++  -  *  /
+
+👉 igual matemática
+
+⚖️ 9. COMPARAÇÃO (DECISÃO)
+if (nota >= 7)
+
+👉 “passou?”
+
+🚨 PEGADINHA
+
+👉 Para comparar texto:
+
+nome.equals("João")
+
+👉 NÃO usa == ❌
+
+🧠 10. OPERADORES LÓGICOS
+&& → E
+|| → OU
+! → NÃO
+🔀 11. IF / ELSE (decisão)
+if (idade >= 18) {
+    System.out.println("Adulto");
+} else {
+    System.out.println("Menor");
+}
+🔁 12. FOR (repetição com número)
+for (int i = 1; i <= 5; i++)
+
+👉 vai de 1 até 5
+
+🔁 13. WHILE (enquanto)
+while (i <= 5)
+
+👉 enquanto for verdadeiro
+
+🔁 14. DO WHILE
+
+👉 executa pelo menos 1 vez
+
+📚 15. ARRAY (lista)
+
+👉 tipo lista de mercado
+
+String[] frutas = {"maçã", "banana"};
+🚨 PEGADINHA
+
+👉 começa no 0
+
+frutas[0] // maçã
+🔒 16. CONSTANTE
+final int VALOR = 10;
+
+👉 nunca muda
+
+🔄 17. CONVERSÃO
+Forçada:
+int i = (int) 10.5;
+
+👉 vira 10
+
+Automática:
+double d = 10;
+🧠 18. WRAPPER (chato mas cai)
+
+👉 transforma primitivo em objeto
+
+int → Integer
+float → Float
+🔥 Comparação com wrapper:
+valor1.equals(valor2)
+🧪 19. EXEMPLO DA SUA PROVA (IMPORTANTÍSSIMO)
+
+👉 Cliente compra produto
+
+🧠 Objetos:
+Cliente
+Produto
+Pedido
+🧠 O que o professor quer ver:
+
+✔ uso de classe
+✔ uso de construtor
+✔ uso de this
+✔ if (decisão)
+✔ método (calcular total)
+
+💥 RESUMÃO PRA PASSAR
+
+👉 Classe = molde
+👉 Objeto = coisa real
+👉 this = objeto atual
+👉 construtor = cria objeto
+👉 if = decisão
+👉 for = repetição
+👉 array = lista
+
+🚨 PEGADINHAS QUE MAIS CAEM
+
+🔥 ANOTA ISSO:
+
+this.nome = nome
+.equals vs ==
+sobrecarga
+array começa em 0
+construtor
+if com null
+🧠 DICA FINAL (SALVA TUA PROVA)
+
+Se travar, pensa assim:
+
+👉 “isso é uma coisa?” → classe
+👉 “isso é ação?” → método
+👉 “isso é info?” → atributo
+
+
