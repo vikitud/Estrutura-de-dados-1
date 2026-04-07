@@ -1,0 +1,247 @@
+📝 🔥 1) SIMULADO (IGUAL PROVA)
+📌 QUESTÃO 1 (teórica - fácil)
+
+O que é uma classe?
+
+a) Um objeto já criado
+b) Um molde para criar objetos
+c) Um método
+d) Um tipo de variável
+
+📌 QUESTÃO 2 (pegadinha)
+
+Qual está CORRETO em Java?
+
+a) 1nome
+b) _nome
+c) nome completo
+d) @nome
+
+📌 QUESTÃO 3 (case sensitive)
+String nome = "João";
+String Nome = "Maria";
+
+Isso vai dar erro?
+
+a) Sim
+b) Não
+
+📌 QUESTÃO 4 (comparação - CAI MUITO)
+
+Para comparar Strings corretamente:
+
+a) nome == "João"
+b) nome.equals("João")
+
+📌 QUESTÃO 5 (this)
+
+O que faz:
+
+this.nome = nome;
+
+a) Cria variável nova
+b) Atribui valor ao atributo do objeto
+c) Apaga variável
+d) Cria método
+
+📌 QUESTÃO 6 (construtor)
+
+Qual é um construtor válido?
+
+a)
+
+void Pessoa()
+
+b)
+
+Pessoa(String nome)
+
+c)
+
+public void Pessoa()
+
+d)
+
+int Pessoa()
+📌 QUESTÃO 7 (if)
+if (nota >= 7)
+
+Significa:
+
+a) Repetição
+b) Comparação
+c) Atribuição
+d) Loop
+
+📌 QUESTÃO 8 (for)
+for (int i = 0; i < 3; i++)
+
+Quantas vezes roda?
+
+a) 2
+b) 3
+c) 4
+d) infinito
+
+📌 QUESTÃO 9 (array)
+int[] v = {10,20,30};
+
+Qual o valor de:
+
+v[0]
+
+a) 10
+b) 20
+c) 30
+d) erro
+
+📌 QUESTÃO 10 (sobrecarga)
+calcular()
+calcular(int x)
+
+Isso é:
+
+a) erro
+b) sobrecarga
+c) repetição
+d) herança
+
+✅ GABARITO (confere só depois!)
+<details> <summary>Ver respostas</summary>
+b
+b
+b
+b
+b
+b
+b
+b
+a
+b
+</details>
+💻 🔥 2) PROVA PRÁTICA (PASSO A PASSO)
+📌 PROBLEMA (igual teu professor)
+
+👉 Criar sistema de:
+
+Cliente
+Produto
+Pedido
+🧱 PASSO 1 — Classe Cliente
+class Cliente {
+    String nome;
+
+    public Cliente(String nome) {
+        this.nome = nome;
+    }
+}
+
+👉 Tradução:
+“cria cliente com nome”
+
+🧱 PASSO 2 — Classe Produto
+class Produto {
+    String nome;
+    double preco;
+
+    public Produto(String nome, double preco) {
+        this.nome = nome;
+        this.preco = preco;
+    }
+}
+🧱 PASSO 3 — Classe Pedido
+class Pedido {
+    Cliente cliente;
+    Produto produto;
+    double total;
+
+    public Pedido(Cliente cliente, Produto produto) {
+        this.cliente = cliente;
+        this.produto = produto;
+        calcularTotal();
+    }
+
+    public void calcularTotal() {
+        total = produto.preco;
+    }
+
+    public void mostrar() {
+        System.out.println(cliente.nome);
+        System.out.println(produto.nome);
+        System.out.println(total);
+    }
+}
+🧱 PASSO 4 — MAIN
+public class Main {
+    public static void main(String[] args) {
+
+        Cliente c = new Cliente("João");
+        Produto p = new Produto("Caderno", 10);
+
+        Pedido ped = new Pedido(c, p);
+
+        ped.mostrar();
+    }
+}
+🧠 O QUE O PROFESSOR VÊ AQUI
+
+✔ classe
+✔ objeto
+✔ construtor
+✔ this
+✔ método
+✔ lógica
+
+👉 Se fizer isso → já passa 🔥
+
+🧠 🧾 3) DECORÉBA FINAL (1 PÁGINA)
+
+👉 LÊ ISSO ANTES DA PROVA
+
+💥 POO
+Classe = molde
+Objeto = coisa criada
+Atributo = característica
+Método = ação
+💥 CONSTRUTOR
+mesmo nome da classe
+não tem tipo de retorno
+usado pra criar objeto
+💥 THIS
+referencia o objeto atual
+usado para diferenciar variável
+💥 STRING
+usa .equals()
+NÃO usa ==
+💥 IF
+decisão
+💥 FOR
+repetição com contador
+💥 WHILE
+repetição com condição
+💥 ARRAY
+começa no índice 0
+usa .length
+💥 TIPOS
+int → inteiro
+double → decimal
+String → texto
+boolean → true/false
+💥 SOBRECARGA
+mesmo nome
+parâmetros diferentes
+💥 CONSTANTE
+final int VALOR = 10;
+🚀 ÚLTIMA DICA (OURO)
+
+Se cair código:
+
+👉 procura:
+
+classe
+construtor
+this
+if
+método
+
+👉 isso resolve 80% da prova
