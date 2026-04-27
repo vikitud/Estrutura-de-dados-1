@@ -1,0 +1,27 @@
+Ponteiros 
+
+ele aponta para um local da memoria, mas como é em C, vai pra qlqer lugar msm do pc.
+
+Código com erro
+VV   VV    VV
+
+*
+int main (void)
+{
+int a, b, *p;
+a = 2;
+*p = 3;
+b = a + (*p);
+printf(" %d", b);
+return -;
+}
+
+*
+
+
+-> erro: *p =3   (n aponta pra lugar nenhum) 
+
+tarefa: 
+1) complete a tabela a baixo de carodo com os valores que as variaveis assumem e de acordo com oq cada apontador aponta
+
+2) Crie um programa com seguintes caracteristicas ( mt coisa, segue o BB ) 
