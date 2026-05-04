@@ -25,3 +25,165 @@ tarefa:
 1) complete a tabela a baixo de carodo com os valores que as variaveis assumem e de acordo com oq cada apontador aponta
 
 2) Crie um programa com seguintes caracteristicas ( mt coisa, segue o BB ) 
+
+04/05/2026
+
+ponteiro = guarda endereço de memoria
+
+-> Ponteiros para estrutura
+
+exp:
+
+struct ponto{
+int x;
+int y;
+};
+
+cria a variavel pp: struct ponto p;
+pra apontador de ponto: struct ponto *pp;
+
+-> alocação dinamica de memoria
+
+struct ponto *p=(struct ponto *) malloc (sizeof(struct ponto));
+
+*
+
+p = (truct ponto*) malloc (sizeof(struct ponto));
+scanf("%d",&p->);
+printf("%d", p->a);
+
+*
+
+treinando em sala:
+
+Defina uma estrutura chamada PerfilSaude que contenha os senguies campos:
+-> Nome Completo: String com 80 caracteres: sexo: um caractere data de nascimento: dia, mes ano separados 
+  ( usando outra estrutura ) altura: um umero real, peso: um numero real, idade atual: numeor inteiro, 
+  o indice de massa corporal: um numero real, frequencia cardiaca maxima: um numero real;
+-> faça um programa que tenha uma função que receba os dados nome, sexo, data de nasci, altura e peso;  
+  e os utilize para definiir os membros de uma variavel perfilsaude usando alocação dinamica de memoria
+-> o programa deve incluir outra função que calcule a idade atual do usuario em anos, a frequencia cardiaca maxima 
+e o indice de massa corporal retornando a variavel estrutura que foi recebida ja com os novos dados incluidos nela;
+-> em seguida deverão ser exibidos todos os dados lidos, alem da idade  ( em anos ) seu IMC, 
+e sua frequencia cardica maxima, atraves de ponteiros ( não use a variavel, use um ponteiro pra variavel e mostre os valores atraves deles.
+informações extras: 
+IMC = peso/altura(2)
+frequencia caridaca maxima = 220 - peso
+
+*
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+
+typedef struct { 
+  int dia;
+  int mes;
+  int ano;
+} data;
+
+typedef struct { 
+  char nome{80}
+  char sexo{1}
+  Data nascimento;
+  float altura;
+  float peso;
+  int idade;
+  float imc;
+  float FrequenciaCardiacaMaxima;
+} PerfilSaude;
+
+PerfilSaude* criaPerfil(char nome[], char sexo, Data nasc, float altura, float peso){
+PerfilSaude *p = (PerfilSaude*) malloc ( sizeof(perfilsaude));
+
+if ( p== NULL ) { 
+  printf("Erro ao alocar memoria!\n");
+exit(1);
+}
+strcpy (p->nome, nome);
+// ^^^^^ basicamente recomendação para colocar junto com os ponteiros que a IA informou
+p->sexo = sexo;
+p->nascimento = nasc;
+p->altura = altura;
+p->peso = peso;
+
+p->idade = 0;
+p->imc = 0;
+p->frequenciacaridacamaxima = 0;
+
+return p;
+}
+
+Perfilsaude* calcular dados (perfilsaude *p){
+time_t t = time(NULL);
+struct tm *dataAtual = localtime(&t);
+
+int anoAtual = dataAtual ->tm_year + 1900;
+int mesAtual = dataAtual ->tm_mon + 1;
+int diaAtual = dataAtual ->tm_mday;
+
+p->idade = anoAtual - p-> nascimento.ano;
+if(mesAtual < p->nascimento.mes ||
+(mesAtual == p-> nascimento.es && diaAtual < p-> nascimento.dia)) { 
+p->idade --;
+}
+p->imc = p->peso / (p->altura * p->altura);
+p->frequenciacardiacamaxima = 200 - p->peso;
+return p;
+}
+void exibirPerfil(PerfilSaude *p){
+ printf("\n===== DADOS DO PERFIL =====\n");
+    printf("Nome: %s\n", p->nome);
+    printf("Sexo: %c\n", p->sexo);
+    printf("Data de nascimento: %02d/%02d/%d\n",
+           p->nascimento.dia,
+           p->nascimento.mes,
+           p->nascimento.ano);
+    printf("Altura: %.2f\n", p->altura);
+    printf("Peso: %.2f\n", p->peso);
+
+    printf("\n===== DADOS CALCULADOS =====\n");
+    printf("Idade: %d anos\n", p->idade);
+    printf("IMC: %.2f\n", p->imc);
+    printf("Frequencia Cardiaca Maxima: %.2f\n", p->freqCardMax);
+}
+
+int main(){
+  char nome[80];
+  char sexo[1];
+  Data nasc;
+  float altura, peso;
+
+  printf("Digite o nome completo:");
+  fgets(nome,80, stdin);
+  nome[strcspn(nome, "\n")] = '\0'; // remove \n
+
+  printf("Digite o sexo (M/F): ");
+  scanf(" %c", &sexo);
+
+  printf("Digite a data de nascimento: ");
+  scanf("%d %d %d", &nasc.dia, &nasc.mes, &nasc.ano);
+
+  printf("Digite a altura (em metros): ");
+    scanf("%f", &altura);
+
+    printf("Digite o peso: ");
+    scanf("%f", &peso);
+
+    // Criar perfil (alocação dinâmica)
+    PerfilSaude *perfil = criarPerfil(nome, sexo, nasc, altura, peso);
+
+    // Calcular dados
+    perfil = calcularDados(perfil);
+
+    // Exibir usando ponteiro
+    exibirPerfil(perfil);
+
+    // Liberar memória
+    free(perfil);
+
+    return 0;
+}
+
+*
