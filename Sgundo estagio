@@ -187,3 +187,90 @@ int main(){
 }
 
 *
+
+18/05/2026
+
+
+Lista encadeada buscar na lista 
+
+- convenções 
+
+estrutura se chama lista 
+
+*
+
+typedef struct lista { 
+int info;
+struct lista * prox;
+}lista;
+
+*
+
+para pesquisar se um certo vaalor se encontra dentor de uma lista e precisa criar uma função que tenha as seguintes caracteristicias: 
+
+função ecebe o começ da list encadeada, funçõ recebe o valor procurado e valor encontrador retorna ponteiro para onde valor se encontra.
+
+*
+
+Lista * buscar ( Lista * I, int valor){
+...
+}
+
+*
+
+percorrendo a lisa 
+
+-para se localizar o valor é preciso percorrer a lista, para tanto vai ser necessário criar um ponteiro auxilia 'p' responsavel po isso, é esse 'p'deve apontar para o começo da lista
+-como ta sendo criado nenhum nvo no, então não é preciso alocar memoria para 'p'
+
+*
+
+Lista * buscar (Lista * I, int valor){
+Lista * p; //criação de p
+p = I;     //p esta apontando para o começo da lista
+}
+*
+
+condição de parada
+
+- enquanto 'p-> info ' for diferente de 'valor', então a busca deve continuar.
+
+- é possivel ver tbm que enq 'p!+NULL< A BUSCA DEV CONTINUAR
+
+_ PRO SER UMA AÇÂ OREPETITIVA< ENTÂO È POSSPIVEL CRIAR UM LAÇO PARA CONTROLAR ESSA PESQUISA:
+
+_ JUNTANDO ESSAS INFO< TEMOS QUE:
+
+*
+
+Lista * buscar (Lista * I, int valor){
+Lista * p;
+p = I;
+while (p!=NULL && p->info != valor {  // precisa ser && obrigatoriamente
+p=p->prox;
+}
+...
+}
+
+*
+
+algoritmo final
+
+- com essas duas situações, temos que:
+
+*
+
+Lista * buscar (Lista * I, int valor){
+Lista * p;
+p=I;
+while (p!=NULL && p->info != valor){
+p=p->prox;
+}
+if (p=NULL)
+returnNULL;
+else
+return p;
+}
+
+*
+
